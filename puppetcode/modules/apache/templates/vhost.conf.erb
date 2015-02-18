@@ -1,0 +1,12 @@
+#NameVirtualHost <%= @vhost_name %>:<%= @port %>
+NameVirtualHost 192.168.88.239
+<VirtualHost <%= @vhost_name %>:<%= @port %>>
+ServerName <%= @servername %>
+DocumentRoot  <%= @docroot %>
+<Directory <%= @docroot %>>
+#Option <%= @options %>
+AllowOverride None
+Order allow,deny
+allow from all
+</Directory>
+</VirtualHost>
